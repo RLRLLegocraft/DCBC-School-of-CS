@@ -14,7 +14,7 @@ Obviously, we also need to link the volunteers and the carriages in the database
 
 class Event(object):
     def __init__(self, customers, date, description=""):
-        self.id = str(uuid4())[:8]
+        self.id = 'a' + str(uuid4())[:8]
         self.customers = customers
         self.date = date
         self.description = description
@@ -43,18 +43,8 @@ if __name__ == '__main__':
     #CREATE EVENTS TABlE
 
     def createEvent(customers, date, description=""):
-        e = Event(customers, date, description)
+        pass
         #make some condition so no two events have the same id
-""""
-        while(True):
-            try:
-                query = "CREATE TABlE IF NOT EXISTS {} (name1 varchar2 Primary Key, name2 varchar2, score numeric)".format(e.id)
-                c.execute(query)
-                break
-            except sqlite3.OperationalError as error:
-                print("We are here: {}".format(error))
-                continue
-""""
 
 
         #INSERT Event details
